@@ -56,8 +56,9 @@ module.exports = function(app){
      
     //pass the user's scores to a function that goes and finds the best match 
     var bestMatch = findBestMatch(userData.scores) ;   
-
-    friendList.push(req.body);
+    
+    bestMatch.push(req.body);
+   // friendList.push(req.body);
     })
 
 };
