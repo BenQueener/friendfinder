@@ -40,28 +40,32 @@ module.exports = function(app){
         var lowestIndex;
 
         console.log(friendList.length);
-        console.log(friendList[1].name);
+        //console.log(friendList[1].name);
         //loop through each friend making a comparison
-        for (i=0; i < friendList.length - 1; i++){
-            console.log(friendList.length);
+        for (i=0; i < friendList.length ; i++){
+           // console.log(friendList.length);
             console.log(friendList[i].name);
             
             var difference = 0;
             //loop through the answers of each person and compare them to the newUser data. store the cumulative difference
-            for (j = 0; j < friendList[i].scores[j].length ;j++) {
-                console.log("Friendlist score length" + friendList[i].scores[j].length);
-                console.log("numAnswers: " + numAnswers[j] + " friendList[i].scores[j]: " + friendList[i].scores[j]);
+            //console.log("Friendlist score length" + friendList[i].scores[1].length);
+             //   console.log("numAnswers: " + numAnswers[1] + " friendList[i].scores[j]: " + friendList[i].scores[1]);
+            for (j = 0; j < 10 ;j++) {
+                
                 difference += Math.abs(numAnswers[j]-friendList[i].scores[j]);            
+                //console.log(difference);
             }
             
             console.log("lowestDiff: " +  lowestDiff);
             console.log("Difference: "+ difference);
+            console.log("Lowest index before: "+ lowestIndex);
             //if the difference is lower than the previous, set the new lowest difference and the index of the individual with that lowest difference
             if (difference < lowestDiff){
                 lowestDiff = difference;
                 lowestIndex = i;
+                console.log("Lowest index after: "+ lowestIndex);
             }
-
+            console.log("Lowest index after: "+ lowestIndex);
         }
         bestMatch = friendList[lowestIndex];
         console.log(bestMatch);
