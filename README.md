@@ -4,5 +4,5 @@ Friendfinder is an application that helps you find friends.  After you take a qu
 I used a model html placeholder while I worked
 ### Starting Friendfinder
 
-Friendfinder is hosted on Heroku. You can find it at [this link](https://.herokuapp.com/).
+Friendfinder is hosted on Heroku. You can find it at [this link](https://friendfinderforme.herokuapp.com/).
 
